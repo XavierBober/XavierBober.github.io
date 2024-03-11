@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément Grelet - Accueil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-image: url("banniere.png");
+            background-position: -100px 0;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            height: 200px;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1em;
+            cursor: pointer;
+            /* Ajout du style du curseur pour les liens cliquables */
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        /* Style pour la section À propos (initiallement cachée) */
+        #about-section {
+            display: none;
+        }
+
+        /* Style pour les images de la section À propos */
+        #about-section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+    </style>
+    <script>
+        // Fonction pour afficher/masquer la section "À propos" ou "Accueil"
+        function toggleSection(sectionId) {
+            var aboutSection = document.getElementById('about-section');
+            var homeSection = document.getElementById('home-section');
+            var contactSection = document.getElementById('contact-section');
+            var productsSection = document.getElementById('products-section');
+
+            if (sectionId === 'about') {
+                aboutSection.style.display = 'block';
+                contactSection.style.display = 'none';
+                homeSection.style.display = 'none';
+                productsSection.style.display = 'none';
+            }
+            else if (sectionId === 'contact') {
+                contactSection.style.display = 'block';
+                homeSection.style.display = 'none';
+                aboutSection.style.display = 'none';
+                productsSection.style.display = 'none';
+
+            }
+
+            else if (sectionId === 'products') {
+                productsSection.style.display = 'block';
+                contactSection.style.display = 'none';
+                homeSection.style.display = 'none';
+                aboutSection.style.display = 'none';
+
+            }
+            else {
+                homeSection.style.display = 'block';
+                aboutSection.style.display = 'none';
+                contactSection.style.display = 'none';
+                productsSection.style.display = 'none';
+
+            }
+        }
+    </script>
+</head>
+
+
+<body>
+
+    <header>
+        <!-- <img src="logo-thales.png" alt="logo-thales" style="float: left; margin-right: 10px;" width="120" height="120"> -->
+        <h1 style="margin-top: 70px;">Clément Grelet</h1>
+        <p>Apprenti ingénieur des composants - THALES</p>
+    </header>
+
+
+    <nav>
+        <a href="#" onclick="toggleSection('home')">Accueil</a>
+        <a href="#" onclick="toggleSection('about')">À propos de THALES</a>
+        <a href="#" onclick="toggleSection('products')">Réalisations</a>
+        <a href="#" onclick="toggleSection('contact')">Contact</a>
+    </nav>
+
+    <section id="home-section">
+        <h2>Bienvenue sur ma Page Web</h2>
+        <p>Je m'appelle Clément Grelet, je suis étudiant au l'IUT CY de Neuville-sur-Oise.</p>
+        <p>Actuellement en 2e année de BUT GEII, je me spécialise en ESE (electronique et systèmes embarqués)</p>
+    </section>
+
+    <!-- Section "À propos" avec images (initiallement cachée) -->
+    <section id="about-section" style="display:none;">
+
+        <h2>THALES</h2>
+        <p>Thales est une entreprise mondiale qui se consacre à l'innovation et à l'excellence dans les domaines de la
+            technologie, de la défense et de la sécurité. Depuis ses débuts, Thales a joué un rôle clé dans le
+            développement de solutions de pointe qui contribuent à façonner un monde plus sûr et plus connecté.</p>
+
+        <body>
+            <center>
+                <img src="logo-thales.png" alt="logo-thales" class="center" width="200" height="200">
+            </center>
+        </body>
+
+
+
+
+        <p>Nos domaines d'expertise comprennent l'aérospatiale, la cybersécurité, la défense, la signalisation
+            ferroviaire, les technologies marines, les solutions pour l'espace et bien plus encore. Nous collaborons
+            avec des partenaires du secteur public et privé pour relever les défis les plus complexes et apporter des
+            solutions innovantes.</p>
+        <p>Si toutefois vous souhaitez en savoir plus : <a href="https://www.thalesgroup.com/fr"
+                target="_blank">thalesgroup.com</a></p>
+    </section>
+
+    <section id="contact-section" style="display:none;">
+        <h2>Contact</h2>
+        <address>
+            <p>&#x2709; Mail Professionnel :
+                <a href="mailto:clement.grelet@thalesgroup.com">clement.grelet@thalesgroup.com</a><br />
+            </p>
+            <p>&#x2709; Mail Personnel :
+                <a href="mailto:clement.grelet.pro@gmail.com">clement.grelet.pro@gmail.com</a><br />
+            </p>
+            <p>&#x1F4DE; Tel :
+                <a href="tel:0782821605">07 82 82 16 05</a>
+            </p>
+        </address>
+    </section>
+
+    <section id="products-section" style="display:none;">
+
+        <style>
+            .column {
+                width: 50%;
+                float: left;
+                box-sizing: border-box;
+                padding: 10px;
+            }
+
+
+            .clearfix::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+
+        <div class="column">
+            <h2 style="margin-left: 100px;">Projets GEII</h2>
+
+            <p>
+            <p>
+            <h4 style="margin-left: 100px;">SAE S2 : Station de mesure</h4>
+            </p>
+
+            <style>
+                span img {
+                    filter: brightness(70%);
+                    transition: transform 0.3s, filter 0.3s ease;
+                }
+
+                span img:hover {
+                    filter: brightness(100%);
+                    transform: scale(110%);
+                    content: "cliquez pour voir le doc";
+                }
+            </style>
+            </head>
+
+
+            <span>
+                <a href="Dossier_Production_carte_température.pdf" target="_blank" style="margin-left: 100px;">
+                    <img src="carte_temp.PNG" title="Dossier de Production Carte Température" height="120"
+                        width="120" />
+                </a>
+                <a href="Dossier_Production_carte_température.pdf" target="_blank" style="margin-left: 30px;">
+                    <img src="carte_lux.png" title="Dossier de Production Carte Lumière" height="120" width="120" />
+                </a>
+                <p></p>
+                <a href="Dossier_Production_carte_température.pdf" target="_blank" style="margin-left: 100px;">
+                    <img src="carte_scop.png" title="Dossier de Production Carte SCOP" height="140" width="280" />
+                </a>
+            </span>
+            <!-- <p><a href="Dossier_Production_carte_température.pdf" target="blank" style="margin-left: 100px;">Dossier
+                    de
+                    Production carte
+                    Température</a>.</p>
+            <p><a href="Dossier_Production_carte_lumiere.pdf" target="blank" style="margin-left: 100px;">Dossier
+                    de
+                    Production carte
+                    Lumière</a>.</p>
+            <p><a href="DOSSIER TECHNIQUE DU PROJET DE SAE.pdf" target="blank" style="margin-left: 100px;">Dossier
+                    de
+                    Production carte SCOP</a>.</p> -->
+
+            <h4 style="margin-left: 100px;">SAE S3 : Enregistreur Vocal</h4>
+            </p>
+            <span>
+                <a href="Rapport SAÉ  Enregistreur Vocal.pdf" target="_blank" style="margin-left: 170px;">
+                    <img src="enregistreur-vocal.png" title="Rapport Enregistreur Vocal" height="120" width="120" />
+                </a>
+            </span>
+
+            <p>
+            <h4 style="margin-left: 100px;">SAE S4 : Station météo</h4>
+            </p>
+            <p><a href="CODE A750.pdf" target="blank" style="margin-left: 100px;"></a>.</p>
+            </p>
+        </div>
+        <div class="column">
+            <h2>Apprentissage - THALES</h2>
+            <p>
+            <p>
+            <h4>Apprentissage 1er semestre : Selector Guide Resistor</h4>
+            </p>
+            <span>
+                <a href="Rapport_Apprentissage Clément Grelet.pdf" target="_blank">
+                    <img src="selector_guide.PNG" title="Selector Guide : Resistor" height="150" width="350" />
+                </a>
+            </span>
+        </div>
+
+        <div class="clearfix"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Thales Group. Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
