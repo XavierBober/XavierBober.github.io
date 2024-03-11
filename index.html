@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Site de Clément Grelet</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .w3-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+
+        }
+
+
+        .w3-card a {
+            text-decoration: none;
+            /* Supprimer la soulignement par défaut des liens */
+            color: inherit;
+            /* Utiliser la couleur par défaut du texte */
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #008CBA;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .w3-card:hover .overlay {
+            height: 100%;
+        }
+
+        .text {
+            white-space: nowrap;
+            color: white;
+            font-size: 18px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-container w3-teal w3-center">
+        <h1>Site Web de Clément Grelet</h1>
+    </div>
+
+
+    <div class="w3-row-padding w3-margin-top">
+        <div class="w3-third" style="display: flex;">
+            <a href="https://www.youtube.com/ " target="blank" style="width: 100%;">
+                <div class="w3-card w3-center" style="position: relative;">
+                    <img src="curriculum-vitae.png" style="width: 100%;">
+                    <div class="overlay">
+                        <div class="text">Curriculum Vitae</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="w3-third" style="display: flex;">
+            <a href="https://www.youtube.com/ " target="blank" style="width: 100%;">
+                <div class="w3-card w3-center" style="position: relative;">
+                    <img src="puce-electronique.png" style="width:100%">
+                    <div class="overlay">
+                        <div class="text">BUT GEII</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="w3-third" style="display: flex;">
+            <a href="https://www.youtube.com/ " target="blank" style="width: 100%;">
+                <div class="w3-card w3-center" style="position: relative;">
+                    <img src="thales_logo.jpeg" style="width:100%; ">
+                    <div class="overlay">
+                        <div class="text">Apprentissage Thales</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <footer class="w3-container w3-teal w3-center w3-bottom">
+        <h5>&copy Clément Grelet, tous droits réservés</h5>
+    </footer>
+
+</body>
+
+
+</html>
